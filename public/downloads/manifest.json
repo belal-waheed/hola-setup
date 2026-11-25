@@ -1,0 +1,122 @@
+{
+  "generatedAt": "2026-11-25T17:35:14.1584763+02:00",
+  "allBundle": {
+    "fileName": "hola-all-bundle.zip",
+    "href": "/downloads/hola-all-bundle.zip",
+    "sizeBytes": 1773778,
+    "sha256": "700de946eb9ad4bf695d2a9cf7854fe7a1f9e9374a018f5f043d82c78e964a15"
+  },
+  "directFiles": [
+    {
+      "fileName": "hola-dev.ahk",
+      "href": "/downloads/hola-dev.ahk",
+      "sizeBytes": 21431,
+      "sha256": "4795d139c275cf0af342daf34965effc8b29ffbaa450445a991b70a4b5b59cda"
+    },
+    {
+      "fileName": "hola-dev.exe",
+      "href": "/downloads/hola-dev.exe",
+      "sizeBytes": 1651200,
+      "sha256": "1d0765a4eb7f54304af2cd0d744275d368451497d36f071731b8adabb7f9e4c6"
+    }
+  ],
+  "bundles": [
+    {
+      "id": "anti-setup",
+      "title": "Antigravity Setup (anti)",
+      "category": "AI Agent Runtime",
+      "targetPath": "%USERPROFILE%\\.gemini\\",
+      "summary": "Global GEMINI.md, sanitized mcp_config.template.json, plugins, skills, and rules templates.",
+      "fileName": "anti-setup.zip",
+      "href": "/downloads/anti-setup.zip",
+      "sizeBytes": 1062140,
+      "sha256": "d9ab5cded5d87ba75c44b2202a19879e40a51de0908b8afb005f6d8eac9ebc19",
+      "files": [
+        "GEMINI.md",
+        "config/config.json",
+        "config/mcp_config.template.json",
+        "config/plugins/",
+        "config/rules_templates/",
+        "config/skills/"
+      ]
+    },
+    {
+      "id": "glazewm-zebar",
+      "title": "GlazeWM & Zebar Config",
+      "category": "Tiling Window Manager",
+      "targetPath": "%USERPROFILE%\\.glzr\\",
+      "summary": "Declarative GlazeWM tiling keybindings, workspace rules, and Zebar topbar settings.",
+      "fileName": "glazewm-zebar.zip",
+      "href": "/downloads/glazewm-zebar.zip",
+      "sizeBytes": 5865,
+      "sha256": "8bf08c7fbdc135e08cb8b4a9e4a61319f09defa66d0b2330ef656ab8bd0ae84c",
+      "files": [
+        "glazewm/config.yaml",
+        "zebar/settings.json"
+      ]
+    },
+    {
+      "id": "vscode-config",
+      "title": "VS Code Configuration",
+      "category": "Editor",
+      "targetPath": "%APPDATA%\\Code\\User\\",
+      "summary": "Curated editor typography, clean UI settings, and custom keyboard bindings.",
+      "fileName": "vscode-config.zip",
+      "href": "/downloads/vscode-config.zip",
+      "sizeBytes": 1924,
+      "sha256": "cacfed270d8dce242dc23617c5218f0ebad4df1ed22f78184df2d5efc062ce85",
+      "files": [
+        "settings.json",
+        "keybindings.json"
+      ]
+    },
+    {
+      "id": "hola-theme",
+      "title": "Hola Theme (Obelisk)",
+      "category": "Themes",
+      "targetPath": "<vault>\\.obsidian\\themes\\Obelisk\\",
+      "summary": "Obelisk muted jewel Obsidian theme plus Edge browser extension theme package.",
+      "fileName": "hola-theme.zip",
+      "href": "/downloads/hola-theme.zip",
+      "sizeBytes": 13567,
+      "sha256": "9646ab67f54226baa8ead27221c069365c4711356ac15b9895297b7232a8c830",
+      "files": [
+        "obsidian-obelisk/theme.css",
+        "obsidian-obelisk/manifest.json",
+        "edge-theme/"
+      ]
+    },
+    {
+      "id": "pwsh-config",
+      "title": "PowerShell 7 & Prompt",
+      "category": "Shell",
+      "targetPath": "%USERPROFILE%\\Documents\\PowerShell\\",
+      "summary": "PowerShell 7 profile, navigation aliases, and Oh My Posh amro.omp.json theme.",
+      "fileName": "pwsh-config.zip",
+      "href": "/downloads/pwsh-config.zip",
+      "sizeBytes": 4257,
+      "sha256": "1dbd9a3ae97718ab7893684ca21c9881f1bdb37b933a4cddca3dff9dd8156a4d",
+      "files": [
+        "Microsoft.PowerShell_profile.ps1",
+        "amro.omp.json"
+      ]
+    },
+    {
+      "id": "autohotkey",
+      "title": "AutoHotkey & hola-dev.exe",
+      "category": "Desktop Automation",
+      "targetPath": "V:\\tools\\auto-hotkey\\",
+      "summary": "hola-dev.ahk source script, MouseDebounce.ahk, Startup XML, and compiled hola-dev.exe.",
+      "fileName": "autohotkey.zip",
+      "href": "/downloads/autohotkey.zip",
+      "sizeBytes": 673567,
+      "sha256": "691a91da4145b2ca8c263fb63d910ef7349973777d2dada9d71e0aa2f8b9688e",
+      "files": [
+        "hola-dev.ahk",
+        "hola-dev.exe",
+        "MouseDebounce.ahk",
+        "Workstation-AHK-Startup.xml"
+      ]
+    }
+  ]
+}

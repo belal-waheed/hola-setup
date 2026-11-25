@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", ui-monospace, monospace;
+}
+
+:root {
+  --surface-canvas-light: #f6f5f1;
+  --surface-canvas-dark: #141413;
+  --surface-card-light: #ffffff;
+  --surface-card-dark: #1d1d1b;
+  --surface-subtle-light: #eceae2;
+  --surface-subtle-dark: #262623;
+
+  --text-primary-light: #181816;
+  --text-primary-dark: #f2f1ec;
+  --text-muted-light: #4f4e48;
+  --text-muted-dark: #b6b4aa;
+
+  --border-strong-light: #8d8a7e;
+  --border-strong-dark: #6b695f;
+
+  --accent-light: #0d4ea6;
+  --accent-dark: #74b2ff;
+  --accent-text-light: #ffffff;
+  --accent-text-dark: #091b34;
+
+  --surface-canvas: var(--surface-canvas-light);
+  --surface-card: var(--surface-card-light);
+  --surface-subtle: var(--surface-subtle-light);
+  --text-primary: var(--text-primary-light);
+  --text-muted: var(--text-muted-light);
+  --border-strong: var(--border-strong-light);
+  --accent: var(--accent-light);
+  --accent-text: var(--accent-text-light);
+  --scrollbar-track: #e6e4dc;
+  --scrollbar-thumb: #6f6d64;
+
+  @media (prefers-color-scheme: dark) {
+    --surface-canvas: var(--surface-canvas-dark);
+    --surface-card: var(--surface-card-dark);
+    --surface-subtle: var(--surface-subtle-dark);
+    --text-primary: var(--text-primary-dark);
+    --text-muted: var(--text-muted-dark);
+    --border-strong: var(--border-strong-dark);
+    --accent: var(--accent-dark);
+    --accent-text: var(--accent-text-dark);
+    --scrollbar-track: #1f1f1d;
+    --scrollbar-thumb: #8a887e;
+  }
+
+  @supports (color: light-dark(white, black)) {
+    --surface-canvas: light-dark(var(--surface-canvas-light), var(--surface-canvas-dark));
+    --surface-card: light-dark(var(--surface-card-light), var(--surface-card-dark));
+    --surface-subtle: light-dark(var(--surface-subtle-light), var(--surface-subtle-dark));
+    --text-primary: light-dark(var(--text-primary-light), var(--text-primary-dark));
+    --text-muted: light-dark(var(--text-muted-light), var(--text-muted-dark));
+    --border-strong: light-dark(var(--border-strong-light), var(--border-strong-dark));
+    --accent: light-dark(var(--accent-light), var(--accent-dark));
+    --accent-text: light-dark(var(--accent-text-light), var(--accent-text-dark));
+    --scrollbar-track: light-dark(#e6e4dc, #1f1f1d);
+    --scrollbar-thumb: light-dark(#6f6d64, #8a887e);
+  }
+
+  color-scheme: light dark;
+  accent-color: var(--accent);
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+@supports not (scrollbar-color: auto) {
+  html {
+    scrollbar-width: auto;
+  }
+  html::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  html::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+  }
+  html::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+}
+
+body {
+  margin: 0;
+  min-block-size: 100dvb;
+  background-color: var(--surface-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+
+.visually-hidden:where(:not(:focus-within, :active)) {
+  position: absolute !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+.skip-link:focus-visible {
+  position: fixed;
+  inset-block-start: 16px;
+  inset-inline-start: 16px;
+  z-index: 50;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: var(--accent);
+  color: var(--accent-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+:where(a:any-link, button):focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.bundle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
+  grid-auto-rows: auto;
+  gap: 24px;
+}
+
+.bundle-card {
+  grid-row: span 3;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-rows: subgrid;
+  gap: 16px;
+  padding: 24px;
+  border-radius: 12px;
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-strong);
+}
+
+@media (forced-colors: active) {
+  .bundle-card {
+    border: 2px solid CanvasText;
+  }
+  :where(a:any-link, button):focus-visible {
+    outline: 3px solid Highlight;
+  }
+}
